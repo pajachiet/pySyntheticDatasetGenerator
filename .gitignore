@@ -95,6 +95,7 @@ old/
 output/
 input/
 tmp/
+!tmp/.gitkeep
 source/
 fhir/
 
