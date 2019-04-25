@@ -40,7 +40,7 @@ class Liquibase():
     def generate_bulk_load(self) -> list:
         tmp = []
         for create_table in self.config:
-            obj = {'sql':[{'sql':f"COPY {create_table['createTable']['tableName']} FROM '{self.params['dir_result']}{create_table['createTable']['tableName']}.csv' CSV DELIMITER ';'"}]}
+            obj = {'sql':[{'sql':f"\copy {create_table['createTable']['tableName']} FROM '{self.params['dir_result']}{create_table['createTable']['tableName']}.csv' CSV DELIMITER ';'"}]}
             tmp.append(obj)
         return tmp
         
